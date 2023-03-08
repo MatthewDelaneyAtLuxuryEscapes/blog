@@ -1,13 +1,16 @@
-import { Box, Paper, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Drawer, Paper, useTheme } from '@mui/material'
 import React, { PropsWithChildren, useMemo } from 'react'
-import useToggleState from '~/hooks/useToggleState'
-import AppNavDrawer, { APP_NAV_DRAWER_WIDTH } from './AppNavDrawer'
+import useToggleState from '~/hooks/utilities/useToggleState'
+import AppNavDrawerContent from './AppNavDrawerContent'
 import AppNavHeader from './AppNavHeader'
+
+export const APP_NAV_DRAWER_WIDTH = 256
 
 export default function AppLayout(props: PropsWithChildren) {
   const theme = useTheme()
+
   const { children } = props
-  const [isDrawerOpen, openDrawer, closeDrawer, toggleDrawer] = useToggleState(true)
+  const [isDrawerOpen, , closeDrawer, toggleDrawer] = useToggleState()
 
   const mainContentTransition = useMemo(
     () =>
@@ -18,22 +21,45 @@ export default function AppLayout(props: PropsWithChildren) {
     [theme.transitions],
   )
 
-  const isMediaSmAndUp = useMediaQuery(theme.breakpoints.up('sm'))
-
-  const { drawerVariant } = useMemo<{ drawerVariant: 'temporary' | 'persistent' }>(() => {
-    return {
-      drawerVariant: isMediaSmAndUp ? 'persistent' : 'temporary',
-    }
-  }, [isMediaSmAndUp])
-
   return (
     <Paper square elevation={0}>
       <Box display="flex">
-        <AppNavDrawer variant={drawerVariant} isOpen={isDrawerOpen} onClose={closeDrawer} />
+        <Drawer
+          open={isDrawerOpen}
+          variant="persistent"
+          sx={{
+            display: { xs: 'none', sm: 'block' },
+            width: APP_NAV_DRAWER_WIDTH,
+            flexShrink: 0,
+            '& .MuiDrawer-paper': {
+              width: APP_NAV_DRAWER_WIDTH,
+              boxSizing: 'border-box',
+            },
+          }}
+        >
+          <AppNavDrawerContent />
+        </Drawer>
+        <Drawer
+          open={isDrawerOpen}
+          variant="temporary"
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            width: APP_NAV_DRAWER_WIDTH,
+            '& .MuiDrawer-paper': {
+              width: APP_NAV_DRAWER_WIDTH,
+              boxSizing: 'border-box',
+            },
+          }}
+          onClose={closeDrawer}
+        >
+          <AppNavDrawerContent />
+        </Drawer>
         <Box
           flexGrow="1"
           sx={{
-            ml: !isDrawerOpen && isMediaSmAndUp ? `-${APP_NAV_DRAWER_WIDTH}px` : undefined,
+            ml: {
+              sm: !isDrawerOpen ? `-${APP_NAV_DRAWER_WIDTH}px` : undefined,
+            },
             transition: mainContentTransition,
           }}
         >
