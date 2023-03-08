@@ -44,6 +44,7 @@ _[TODO: ESLint + Prettier + Principles]_
 _[TODO]_
 
 ## Supporting Documentation
+- [Conventions and principles](https://github.com/lux-group/www-le-customer/blob/master/docs/index.md)
 - [Next.JS 13](https://nextjs.org/docs/getting-started) ([beta](https://beta.nextjs.org/docs))
 - [Material UI](https://mui.com/material-ui/getting-started/overview/)
 - [ESLint](https://eslint.org/docs/latest/use/getting-started)
