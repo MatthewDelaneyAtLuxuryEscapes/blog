@@ -8,6 +8,8 @@ import {
   SxProps,
   Toolbar,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from '@mui/material'
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded'
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded'
@@ -29,13 +31,15 @@ const APP_NAV_DRAWER_SX: SxProps = {
 
 interface Props {
   isOpen: boolean
+  variant: 'persistent' | 'temporary'
+  onClose: () => void
 }
 
 export default function AppNavDrawer(props: Props) {
-  const { isOpen } = props
+  const { isOpen, variant, onClose } = props
 
   return (
-    <Drawer open={isOpen} variant="persistent" sx={APP_NAV_DRAWER_SX}>
+    <Drawer open={isOpen} variant={variant} sx={APP_NAV_DRAWER_SX} onClose={onClose}>
       <Toolbar>
         <AppLogo />
       </Toolbar>

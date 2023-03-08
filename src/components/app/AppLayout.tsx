@@ -1,4 +1,4 @@
-import { Box, Paper, useTheme } from '@mui/material'
+import { Box, Paper, useMediaQuery, useTheme } from '@mui/material'
 import React, { PropsWithChildren, useMemo } from 'react'
 import useToggleState from '~/hooks/useToggleState'
 import AppNavDrawer, { APP_NAV_DRAWER_WIDTH } from './AppNavDrawer'
@@ -18,14 +18,22 @@ export default function AppLayout(props: PropsWithChildren) {
     [theme.transitions],
   )
 
+  const isMediaSmAndUp = useMediaQuery(theme.breakpoints.up('sm'))
+
+  const { drawerVariant } = useMemo<{ drawerVariant: 'temporary' | 'persistent' }>(() => {
+    return {
+      drawerVariant: isMediaSmAndUp ? 'persistent' : 'temporary',
+    }
+  }, [isMediaSmAndUp])
+
   return (
     <Paper square elevation={0}>
       <Box display="flex">
-        <AppNavDrawer isOpen={isDrawerOpen} />
+        <AppNavDrawer variant={drawerVariant} isOpen={isDrawerOpen} onClose={closeDrawer} />
         <Box
           flexGrow="1"
           sx={{
-            ml: !isDrawerOpen ? `-${APP_NAV_DRAWER_WIDTH}px` : undefined,
+            ml: !isDrawerOpen && isMediaSmAndUp ? `-${APP_NAV_DRAWER_WIDTH}px` : undefined,
             transition: mainContentTransition,
           }}
         >
