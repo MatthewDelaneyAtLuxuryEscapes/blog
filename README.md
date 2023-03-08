@@ -44,7 +44,7 @@ _[TODO: ESLint + Prettier + Principles]_
 _[TODO]_
 
 ## Supporting Documentation
-- **[Next.JS 13](https://nextjs.org/docs/getting-started) ([beta](https://beta.nextjs.org/docs))**
-- [**Material UI**](https://mui.com/material-ui/getting-started/overview/)
-- [**ESLint**](https://eslint.org/docs/latest/use/getting-started)
-- [**Prettier**](https://prettier.io/docs/en/index.html)
+- [Next.JS 13](https://nextjs.org/docs/getting-started) ([beta](https://beta.nextjs.org/docs))
+- [Material UI](https://mui.com/material-ui/getting-started/overview/)
+- [ESLint](https://eslint.org/docs/latest/use/getting-started)
+- [Prettier](https://prettier.io/docs/en/index.html)
