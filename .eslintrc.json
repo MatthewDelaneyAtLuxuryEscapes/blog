@@ -4,6 +4,7 @@
   "plugins": ["prettier", "unused-imports"],
   "rules": {
     "prettier/prettier": "warn",
+    "no-console": "error",
     "no-magic-numbers": "warn",
     "@next/next/no-html-link-for-pages": "off"
   }
