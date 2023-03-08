@@ -6,7 +6,7 @@ const nextConfig = {
   },
 }
 
-//to analyse bundle size run: yarn analyze
+//enables `yarn analyze`
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
