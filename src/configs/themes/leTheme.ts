@@ -2,7 +2,20 @@
 
 import { createTheme, Theme } from '@mui/material/styles'
 
-const leTheme: Theme = createTheme({})
+const leTheme: Theme = createTheme({
+  shape: {
+    borderRadius: 12,
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 4,
+        },
+      },
+    },
+  },
+})
 
 export type LETheme = typeof leTheme
 
