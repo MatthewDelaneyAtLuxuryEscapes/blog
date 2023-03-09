@@ -28,7 +28,7 @@ export default function AppLayout(props: PropsWithChildren) {
           open={isDrawerOpen}
           variant="persistent"
           sx={{
-            display: { xs: 'none', sm: 'block' },
+            display: { xs: 'none', md: 'block' },
             width: APP_NAV_DRAWER_WIDTH,
             flexShrink: 0,
             '& .MuiDrawer-paper': {
@@ -43,7 +43,7 @@ export default function AppLayout(props: PropsWithChildren) {
           open={isDrawerOpen}
           variant="temporary"
           sx={{
-            display: { xs: 'block', sm: 'none' },
+            display: { xs: 'block', md: 'none' },
             width: APP_NAV_DRAWER_WIDTH,
             '& .MuiDrawer-paper': {
               width: APP_NAV_DRAWER_WIDTH,
@@ -58,7 +58,7 @@ export default function AppLayout(props: PropsWithChildren) {
           flexGrow="1"
           sx={{
             ml: {
-              sm: !isDrawerOpen ? `-${APP_NAV_DRAWER_WIDTH}px` : undefined,
+              md: !isDrawerOpen ? `-${APP_NAV_DRAWER_WIDTH}px` : undefined,
             },
             transition: mainContentTransition,
           }}
