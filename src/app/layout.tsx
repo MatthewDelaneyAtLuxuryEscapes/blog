@@ -1,6 +1,6 @@
 'use client'
 import React, { PropsWithChildren } from 'react'
-import MUIProvider from '~/components/base/MUIProvider'
+import MUIProvider from '~/contexts/MUIProvider'
 import AppLayout from '~/components/app/AppLayout'
 import './base.css'
 
