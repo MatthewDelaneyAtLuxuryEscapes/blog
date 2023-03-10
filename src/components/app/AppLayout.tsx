@@ -1,8 +1,10 @@
-import { Box, Drawer, Paper, useTheme } from '@mui/material'
-import React, { PropsWithChildren, useMemo } from 'react'
+import { Box, Drawer, Paper, useMediaQuery, useTheme } from '@mui/material'
+import React, { PropsWithChildren, useEffect, useMemo } from 'react'
+import debounce from 'lodash.debounce'
 import useToggleState from '~/hooks/utilities/useToggleState'
 import AppNavDrawerContent from './AppNavDrawerContent'
 import AppNavHeader from './AppNavHeader'
+import usePrevious from '~/hooks/utilities/usePrevious'
 
 export const APP_NAV_DRAWER_WIDTH = 256
 
@@ -21,8 +23,23 @@ export default function AppLayout(props: PropsWithChildren) {
     [theme.transitions],
   )
 
+  useEffect(() => {
+    const handleResize = debounce(() => {
+      document.documentElement.style.setProperty('--vh', `calc(${window.innerHeight}px * 0.01)`)
+      // eslint-disable-next-line no-magic-numbers
+    }, 100)
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
-    <Paper square elevation={0}>
+    <Paper square elevation={0} sx={{ minHeight: '100%' }}>
       <Box display="flex">
         <Drawer
           open={isDrawerOpen}

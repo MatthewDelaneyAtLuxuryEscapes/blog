@@ -19,7 +19,7 @@ import SellOutlinedIcon from '@mui/icons-material/SellOutlined'
 
 export default function Home() {
   return (
-    <Container component="main" maxWidth="xl">
+    <Container component="main" maxWidth="xl" sx={{ py: 3 }}>
       <Grid container spacing={4} alignItems="stretch" alignContent="stretch">
         <Grid item xs={12}>
           <Card sx={{ backgroundColor: 'primary.main', color: 'primary.contrastText' }}>
