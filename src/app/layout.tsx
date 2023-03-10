@@ -1,7 +1,7 @@
 'use client'
 import React, { PropsWithChildren } from 'react'
 import MUIProvider from '~/contexts/MUIProvider'
-import AppLayout from '~/components/app/AppLayout'
+import AppLayout from './AppLayout'
 import './base.css'
 
 export default function RootLayout(props: PropsWithChildren) {
