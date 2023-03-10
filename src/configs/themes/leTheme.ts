@@ -28,7 +28,7 @@ const leTheme: Theme = createTheme({
     neutral: {
       main: common.white,
       light: common.white,
-      dark: grey[200],
+      dark: grey[100],
       contrastText: common.black,
     },
   },
