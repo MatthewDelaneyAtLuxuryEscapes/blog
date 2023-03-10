@@ -56,6 +56,13 @@ const leTheme: Theme = createTheme({
         },
       },
     },
+    MuiCardActions: {
+      styleOverrides: {
+        root: {
+          padding: '8px 16px 16px',
+        },
+      },
+    },
     MuiDrawer: {
       styleOverrides: {
         paper: {
