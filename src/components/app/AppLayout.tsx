@@ -10,9 +10,11 @@ export const APP_NAV_DRAWER_WIDTH = 256
 
 export default function AppLayout(props: PropsWithChildren) {
   const theme = useTheme()
+  const isSmAndUp = useMediaQuery(theme.breakpoints.up('sm'), { noSsr: true })
+  const wasSmAndUp = usePrevious(isSmAndUp)
 
   const { children } = props
-  const [isDrawerOpen, , closeDrawer, toggleDrawer] = useToggleState()
+  const [isDrawerOpen, openDrawer, closeDrawer, toggleDrawer] = useToggleState()
 
   const mainContentTransition = useMemo(
     () =>
@@ -22,6 +24,13 @@ export default function AppLayout(props: PropsWithChildren) {
       }),
     [theme.transitions],
   )
+
+  useEffect(() => {
+    if (!wasSmAndUp && isSmAndUp) {
+      openDrawer()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSmAndUp, wasSmAndUp])
 
   useEffect(() => {
     const handleResize = debounce(() => {
@@ -71,6 +80,7 @@ export default function AppLayout(props: PropsWithChildren) {
         >
           <AppNavDrawerContent />
         </Drawer>
+
         <Box
           flexGrow="1"
           sx={{
