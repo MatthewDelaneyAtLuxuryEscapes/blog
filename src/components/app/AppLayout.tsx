@@ -59,7 +59,6 @@ export default function AppLayout(props: PropsWithChildren) {
             flexShrink: 0,
             '& .MuiDrawer-paper': {
               width: APP_NAV_DRAWER_WIDTH,
-              boxSizing: 'border-box',
             },
           }}
         >
@@ -73,7 +72,6 @@ export default function AppLayout(props: PropsWithChildren) {
             width: APP_NAV_DRAWER_WIDTH,
             '& .MuiDrawer-paper': {
               width: APP_NAV_DRAWER_WIDTH,
-              boxSizing: 'border-box',
             },
           }}
           onClose={closeDrawer}
