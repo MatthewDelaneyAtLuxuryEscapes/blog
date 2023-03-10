@@ -39,6 +39,12 @@ const leTheme: Theme = createTheme({
           borderRadius: 4,
         },
       },
+      variants: [
+        {
+          props: { variant: 'contained', color: 'neutral' },
+          style: {},
+        },
+      ],
     },
     MuiCard: {
       styleOverrides: {
