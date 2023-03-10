@@ -1,6 +1,4 @@
-/* eslint-disable no-magic-numbers */
 'use client'
-
 import { blue, common, grey } from '@mui/material/colors'
 import { createTheme, Theme } from '@mui/material/styles'
 

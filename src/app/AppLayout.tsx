@@ -35,7 +35,6 @@ export default function AppLayout(props: PropsWithChildren) {
   useEffect(() => {
     const handleResize = debounce(() => {
       document.documentElement.style.setProperty('--vh', `calc(${window.innerHeight}px * 0.01)`)
-      // eslint-disable-next-line no-magic-numbers
     }, 100)
 
     handleResize()
