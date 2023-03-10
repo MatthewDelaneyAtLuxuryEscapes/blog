@@ -14,11 +14,10 @@ import {
   Toolbar,
   useTheme,
 } from '@mui/material'
-import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded'
-import WorkRoundedIcon from '@mui/icons-material/WorkRounded'
-import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded'
-import ReceiptRoundedIcon from '@mui/icons-material/ReceiptRounded'
-import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded'
+import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
+import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined'
+import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined'
+import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined'
 import AppLogo from './AppLogo'
 import Link from 'next/link'
 
@@ -41,33 +40,27 @@ export default function AppNavDrawerContent() {
           <List>
             <ListItemButton component={Link} href="/">
               <ListItemIcon>
-                <DashboardRoundedIcon />
+                <DashboardOutlinedIcon />
+              </ListItemIcon>
+              <ListItemText>Dashboard</ListItemText>
+            </ListItemButton>
+            <ListItemButton component={Link} href="/reporting">
+              <ListItemIcon>
+                <AutoGraphOutlinedIcon />
               </ListItemIcon>
               <ListItemText>Reporting</ListItemText>
             </ListItemButton>
-            <ListItemButton component={Link} href="/business-trips">
-              <ListItemIcon>
-                <WorkRoundedIcon />
-              </ListItemIcon>
-              <ListItemText>Business Trips</ListItemText>
-            </ListItemButton>
             <ListItemButton component={Link} href="/people">
               <ListItemIcon>
-                <PeopleRoundedIcon />
+                <SupervisorAccountOutlinedIcon />
               </ListItemIcon>
               <ListItemText>People</ListItemText>
             </ListItemButton>
             <ListItemButton component={Link} href="/policies">
               <ListItemIcon>
-                <ReceiptRoundedIcon />
+                <NoteAltOutlinedIcon />
               </ListItemIcon>
               <ListItemText>Policy</ListItemText>
-            </ListItemButton>
-            <ListItemButton component={Link} href="/settings">
-              <ListItemIcon>
-                <SettingsRoundedIcon />
-              </ListItemIcon>
-              <ListItemText>Settings</ListItemText>
             </ListItemButton>
           </List>
         </Stack>
