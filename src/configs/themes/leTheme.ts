@@ -10,20 +10,6 @@ declare module '@mui/material/styles' {
   interface PaletteOptions {
     neutral: PaletteOptions['primary']
   }
-
-  interface PaletteColor {
-    darker?: string
-    darkest?: string
-    lighter?: string
-    lightest?: string
-  }
-
-  interface SimplePaletteColorOptions {
-    darker?: string
-    darkest?: string
-    lighter?: string
-    lightest?: string
-  }
 }
 
 declare module '@mui/material/Button' {
@@ -36,12 +22,8 @@ const leTheme: Theme = createTheme({
   palette: {
     primary: {
       main: blue[500],
-      dark: blue[600],
-      darker: blue[700],
-      darkest: blue[900],
       light: blue[400],
-      lighter: blue[200],
-      lightest: blue[50],
+      dark: blue[600],
     },
     neutral: {
       main: common.white,
