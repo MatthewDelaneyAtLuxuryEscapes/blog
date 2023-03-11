@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ext .ts,.tsx,.json,.yml ./",
+    "lint:fix": "yarn lint --fix",
     "lint:ts": "eslint --ext .ts,.tsx ./",
     "lint:json": "eslint --ext .json ./",
     "lint:yml": "eslint --ext .yml ./",
