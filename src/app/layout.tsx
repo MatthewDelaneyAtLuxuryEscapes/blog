@@ -1,7 +1,6 @@
 'use client'
 import React, { PropsWithChildren } from 'react'
 import MUIProvider from '~/contexts/MUIProvider'
-import AppLayout from './AppLayout'
 import './base.css'
 
 export default function RootLayout(props: PropsWithChildren) {
@@ -13,9 +12,7 @@ export default function RootLayout(props: PropsWithChildren) {
         <title>LE for Business</title>
       </head>
       <body>
-        <MUIProvider>
-          <AppLayout>{children}</AppLayout>
-        </MUIProvider>
+        <MUIProvider>{children}</MUIProvider>
       </body>
     </html>
   )

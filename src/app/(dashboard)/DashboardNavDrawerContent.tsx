@@ -18,16 +18,16 @@ import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
 import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined'
 import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined'
 import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined'
-import AppLogo from './AppLogo'
+import BusinessTravellerLogo from '~/shared/components/BusinessTravellerLogo'
 import Link from 'next/link'
 
-export default function AppNavDrawerContent() {
+export default function DashboardNavDrawerContent() {
   const theme = useTheme()
 
   return (
     <>
       <Toolbar>
-        <AppLogo />
+        <BusinessTravellerLogo />
       </Toolbar>
       <Stack direction="column" gap={2} px={2} pb={4} justifyContent="space-between" height="100%">
         <Stack direction="column" gap={4}>

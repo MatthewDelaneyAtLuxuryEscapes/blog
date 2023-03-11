@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 
-export default function AppLogo() {
+const LOGO_CSS_STYLES: CSSProperties = {
+  width: 'auto',
+  height: '17px',
+}
+
+export default function BusinessTravellerLogo() {
   return (
-    <svg viewBox="0 0 203 17" xmlns="http://www.w3.org/2000/svg" width="auto" height="17">
+    <svg viewBox="0 0 203 17" xmlns="http://www.w3.org/2000/svg" style={LOGO_CSS_STYLES}>
       <path
         fillRule="evenodd"
         clipRule="evenodd"

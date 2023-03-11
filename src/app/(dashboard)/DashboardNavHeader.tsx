@@ -9,7 +9,7 @@ interface Props {
   onToggleDrawer: () => void
 }
 
-export default function GlobalNavigationHeader(props: Props) {
+export default function DashboardNavHeader(props: Props) {
   const { isDrawerOpen, onToggleDrawer } = props
 
   return (

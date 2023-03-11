@@ -17,7 +17,7 @@ import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlin
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import SellOutlinedIcon from '@mui/icons-material/SellOutlined'
 
-export default function Home() {
+export default function DashboardHomePage() {
   return (
     <Container component="main" maxWidth="xl" sx={{ py: 3 }}>
       <Grid container spacing={4} alignItems="stretch" alignContent="stretch">
