@@ -1,6 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": ["yarn.lock"],
+  "ignorePatterns": ["yarn.lock", "*.md"],
   "extends": ["next/core-web-vitals", "plugin:react/recommended"],
   "plugins": ["prettier", "react", "unused-imports", "json", "yaml"],
   "rules": {
