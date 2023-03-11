@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AppLogo() {
   return (
-    <svg viewBox="0 0 203 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 203 17" xmlns="http://www.w3.org/2000/svg" width="auto" height="17">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
