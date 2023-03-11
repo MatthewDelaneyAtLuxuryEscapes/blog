@@ -10,6 +10,9 @@
     "lint:ts": "eslint --ext .ts,.tsx ./",
     "lint:json": "eslint --ext .json ./",
     "lint:yml": "eslint --ext .yml ./",
+    "test:unit": "vitest --run",
+    "test:unit:watch": "vitest",
+    "test:unit:visualise": "vitest --ui",
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
@@ -30,6 +33,7 @@
     "@types/node": "18.14.6",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "@vitest/ui": "0.29.2",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "eslint-config-prettier": "8.7.0",
@@ -39,7 +43,8 @@
     "eslint-plugin-unused-imports": "2.0.0",
     "eslint-plugin-yaml": "0.5.0",
     "lefthook": "1.3.3",
-    "prettier": "2.8.4"
+    "prettier": "2.8.4",
+    "vitest": "0.29.2"
   },
   "engines": {
     "node": "16.16.0"
