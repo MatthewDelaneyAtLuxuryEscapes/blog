@@ -10,7 +10,8 @@
       "paths": [
         {"name": "@mui/system", "message": "Use @mui/material instead."},
         {"name": "@mui/styles", "message": "Use @mui/material instead."},
-        {"name": "@emotion/react", "message": "Use @mui/material instead."}
+        {"name": "@emotion/react", "message": "Use @mui/material instead."},
+        {"name": "notistack", "message": "Use internal snackbar instead."}
       ]
     }],
     "@next/next/no-html-link-for-pages": "off",

@@ -2,6 +2,7 @@
 import React, { PropsWithChildren } from 'react'
 import MUIProvider from '~/contexts/MUIProvider'
 import QueryProvider from '~/contexts/QueryProvider'
+import SnackbarProvider from '~/contexts/SnackbarProvider'
 import './base.css'
 
 export default function RootLayout(props: PropsWithChildren) {
@@ -14,7 +15,9 @@ export default function RootLayout(props: PropsWithChildren) {
       </head>
       <body>
         <QueryProvider>
-          <MUIProvider>{children}</MUIProvider>
+          <MUIProvider>
+            <SnackbarProvider>{children}</SnackbarProvider>
+          </MUIProvider>
         </QueryProvider>
       </body>
     </html>
