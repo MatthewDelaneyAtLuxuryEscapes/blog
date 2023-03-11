@@ -80,7 +80,15 @@ _`Cypress` is not configured yet!_
 _[TODO]_
 
 ## Quality of Code
-_[TODO: ESLint + Prettier + Principles]_
+_`ESLint` is configured for code validation. `Prettier`, hooked into `ESLint` as a plugin, is configured for code formatting._
+
+_`Lefthook`'s `pre-commit` hook is configured to lint staged files. Every staged file will be linted right before the git commit; and in case of errors, the commit would not go through._
+
+### Code formatting in VSCode
+- Install the `ESLint` extension. _(included in the workspace extension recommendation)_
+- Enable `ESlint` as formatter. _(included in the workspace settings recommendation)_
+- Set `ESLint` as the default formatter. _(included in the workspace settings recommendation)_
+- _OPTIONALLY_, enable format-on-save.
 
 ## Supporting Documentation
 - [Conventions and principles](https://github.com/lux-group/www-le-customer/blob/master/docs/index.md)
