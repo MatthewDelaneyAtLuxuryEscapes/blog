@@ -89,3 +89,4 @@ _[TODO: ESLint + Prettier + Principles]_
 - [ESLint](https://eslint.org/docs/latest/use/getting-started)
 - [Prettier](https://prettier.io/docs/en/index.html)
 - [Vitest](https://vitest.dev) ([Vitest vs. other test runners](https://vitest.dev/guide/comparisons.html))
+- [TanStack React Query](https://react-query-v3.tanstack.com/guides/queries)
