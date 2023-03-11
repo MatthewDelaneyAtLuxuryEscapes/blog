@@ -72,6 +72,13 @@ const leTheme: Theme = createTheme({
         },
       },
     },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        root: {
+          borderRadius: '4px',
+        },
+      },
+    },
     MuiPaper: {
       styleOverrides: {
         root: {
