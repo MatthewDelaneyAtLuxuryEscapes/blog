@@ -1,7 +1,8 @@
 {
   "root": true,
+  "ignorePatterns": ["yarn.lock"],
   "extends": ["next/core-web-vitals", "plugin:react/recommended"],
-  "plugins": ["prettier", "react", "unused-imports"],
+  "plugins": ["prettier", "react", "unused-imports", "json", "yaml"],
   "rules": {
     "prettier/prettier": "warn",
     "no-console": "error",
