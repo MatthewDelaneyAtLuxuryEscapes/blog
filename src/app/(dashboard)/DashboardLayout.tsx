@@ -15,7 +15,12 @@ export default function DashboardLayout(props: PropsWithChildren) {
   const wasSmAndUp = usePrevious(isSmAndUp)
 
   const { children } = props
-  const [isDrawerOpen, openDrawer, closeDrawer, toggleDrawer] = useToggleState()
+  const {
+    isToggled: isDrawerOpen,
+    toggleOn: openDrawer,
+    toggleOff: closeDrawer,
+    toggle: toggleDrawer,
+  } = useToggleState()
 
   const mainContentTransition = useMemo(
     () =>

@@ -1,14 +1,14 @@
 import { useCallback, useState } from 'react'
 
-type TogglableState = readonly [
-  booleanState: boolean,
-  toggleOn: () => void,
-  toggleOff: () => void,
-  toggleBoolean: () => void,
-]
+interface TogglableState {
+  isToggled: boolean
+  toggleOn: () => void
+  toggleOff: () => void
+  toggle: () => void
+}
 
 export default function useToggleState(initialState = false): TogglableState {
-  const [booleanState, toggleBoolean] = useState<boolean>(initialState)
+  const [isToggled, toggleBoolean] = useState<boolean>(initialState)
 
   const toggleOn = useCallback(() => {
     toggleBoolean(true)
@@ -20,5 +20,5 @@ export default function useToggleState(initialState = false): TogglableState {
     toggleBoolean((curr) => !curr)
   }, [])
 
-  return [booleanState, toggleOn, toggleOff, toggle]
+  return { isToggled, toggleOn, toggleOff, toggle }
 }
