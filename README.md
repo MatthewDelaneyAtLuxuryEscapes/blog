@@ -5,7 +5,7 @@
 - `yarn`
 
 > _Find versions in `package.json`_
-### Suggestions
+#### Suggested Tools
 - `VSCode` as code editor _(extensions and settings recommendations included)_
 - `volta.sh` as JS tool manager _(alternative for `nvm`)_
 
