@@ -76,8 +76,37 @@ yarn test:unit:visualise
 > Alternatively, [Vitest VSCode extension](https://marketplace.visualstudio.com/items?itemName=ZixuanChen.vitest-explorer) can be used as a convinient way to run tests inside the code editor. (included in workspace recommendations)
 
 ### E2E Tests
-_`Cypress` is not configured yet!_
-_[TODO]_
+_`Cypress` is configured._
+
+#### Creating Tests
+Given the to-be-tested scenario is making sure the word "Foo" is visible when the route "/foo" is visited, create a new test file at `cypress/e2e/` directory namely `viewFoo.cy.ts`, and start defining test suites/cases using the [Cypress API](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test).
+
+`cypress/e2e/viewFoo.cy.ts` 👇
+
+```ts
+describe('when the foo route is visited', () => {
+  it('`main` element should display the word "Foo"', () => {
+    cy.visit('/foo')
+    cy.get('main').should('have.text', 'Foo')
+  })
+})
+
+```
+
+#### Running Tests
+> **First, make sure the Node.JS server is running.**
+```bash
+# run all tests, once
+yarn test:e2e
+
+# run a particual test, foo.cy.ts
+yarn test:e2e --spec "cypress/e2e/viewFoo.cy.ts"
+
+# watch tests run in Cypress GUI
+yarn test:e2e:visualise
+```
+
+
 
 ## Quality of Code
 _`ESLint` is configured for code validation. `Prettier`, hooked into `ESLint` as a plugin, is configured for code formatting._
@@ -97,4 +126,5 @@ _`Lefthook`'s `pre-commit` hook is configured to lint staged files. Every staged
 - [ESLint](https://eslint.org/docs/latest/use/getting-started)
 - [Prettier](https://prettier.io/docs/en/index.html)
 - [Vitest](https://vitest.dev) ([Vitest vs. other test runners](https://vitest.dev/guide/comparisons.html))
+- [Cypress](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test)
 - [TanStack React Query](https://react-query-v3.tanstack.com/guides/queries)
