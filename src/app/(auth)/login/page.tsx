@@ -1,5 +1,5 @@
 'use client'
-import { Box, Button, Card, Container, Divider, Stack, TextField, Typography } from '@mui/material'
+import { Button, Card, Container, Divider, Stack, TextField, Typography } from '@mui/material'
 import React from 'react'
 import BusinessTravellerLogo from '~/components/BusinessTravellerLogo'
 
