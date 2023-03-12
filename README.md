@@ -92,7 +92,7 @@ describe('when the foo route is visited', () => {
 # run all tests, once
 yarn test:e2e
 
-# run a particual test, foo.cy.ts
+# run a particual test, viewFoo.cy.ts
 yarn test:e2e --spec "cypress/e2e/viewFoo.cy.ts"
 
 # watch tests run in Cypress GUI
