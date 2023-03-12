@@ -2,10 +2,10 @@
 import { Box, Drawer, Paper, useMediaQuery, useTheme } from '@mui/material'
 import React, { PropsWithChildren, useEffect, useMemo } from 'react'
 import debounce from 'lodash.debounce'
-import useToggleState from '~/hooks/utilities/useToggleState'
+import useToggleState from '~/hooks/useToggleState'
 import DashboardNavDrawerContent from './DashboardNavDrawerContent'
 import DashboardNavHeader from './DashboardNavHeader'
-import usePrevious from '~/hooks/utilities/usePrevious'
+import usePrevious from '~/hooks/usePrevious'
 
 export const DASHBOARD_NAV_DRAWER_WIDTH = 256
 
