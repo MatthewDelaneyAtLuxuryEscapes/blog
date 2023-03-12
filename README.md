@@ -71,6 +71,11 @@ yarn test:unit:gui
 ### End-to-End Testing
 _`Cypress` is configured._
 
+#### Setting up E2E Tests
+```bash
+yarn test:e2e:init
+```
+
 #### Writing E2E Tests
 Given the to-be-tested scenario is making sure the word "Foo" is visible when the route "/foo" is visited, create a new test file at `cypress/e2e/` directory namely `viewFoo.cy.ts`, and start defining test suites/cases using the [Cypress API](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test).
 

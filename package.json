@@ -14,8 +14,9 @@
     "test:unit": "vitest --run",
     "test:unit:watch": "vitest",
     "test:unit:gui": "vitest --ui",
-    "test:e2e": "cypress run --e2e",
-    "test:e2e:gui": "cypress open --e2e",
+    "test:e2e:init": "cd tests && yarn",
+    "test:e2e": "cd tests && yarn cypress run --e2e",
+    "test:e2e:gui": "cd tests && yarn cypress open --e2e",
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
@@ -43,7 +44,6 @@
     "@typescript-eslint/eslint-plugin": "5.54.1",
     "@typescript-eslint/parser": "5.54.1",
     "@vitest/ui": "0.29.2",
-    "cypress": "12.7.0",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "eslint-config-prettier": "8.7.0",
