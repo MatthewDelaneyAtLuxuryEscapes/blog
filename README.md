@@ -19,13 +19,6 @@ yarn
 ```bash
 # start development server (HMR enbaled)
 yarn dev
-
-# check code for programmatic and stylistic errors
-yarn lint
-# more on this in "Quality of Code" section
-
-# attempt to to fix "auto-fixable" lint issues
-yarn lint:fix
 ```
 
 ### Build and Serve
@@ -106,14 +99,19 @@ yarn test:e2e --spec "cypress/e2e/viewFoo.cy.ts"
 yarn test:e2e:gui
 ```
 
-
-
-## Quality of Code
+### Linting and Formatting
 _`ESLint` is configured for code validation. `Prettier`, hooked into `ESLint` as a plugin, is configured for code formatting._
 
+```bash
+# check code for programmatic and stylistic errors
+yarn lint
+
+# attempt to to fix "auto-fixable" lint issues
+yarn lint:fix
+```
 _`Lefthook`'s `pre-commit` hook is configured to lint staged files. Every staged file will be linted right before the git commit; and in case of errors, the commit would not go through._
 
-### Code formatting in VSCode
+#### Code formatting in VSCode
 - Install the `ESLint` extension. _(included in the workspace extension recommendation)_
 - Enable `ESlint` as formatter. _(included in the workspace settings recommendation)_
 - Set `ESLint` as the default formatter. _(included in the workspace settings recommendation)_
