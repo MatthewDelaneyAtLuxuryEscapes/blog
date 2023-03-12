@@ -18,7 +18,7 @@ import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
 import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined'
 import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined'
 import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined'
-import BusinessTravellerLogo from '~/shared/components/BusinessTravellerLogo'
+import BusinessTravellerLogo from '~/components/BusinessTravellerLogo'
 import Link from 'next/link'
 
 export default function DashboardNavDrawerContent() {

@@ -1,7 +1,7 @@
 'use client'
 import { Box, Button, Card, Container, Divider, Stack, TextField, Typography } from '@mui/material'
 import React from 'react'
-import BusinessTravellerLogo from '~/shared/components/BusinessTravellerLogo'
+import BusinessTravellerLogo from '~/components/BusinessTravellerLogo'
 
 export default function AuthLoginPage() {
   return (
