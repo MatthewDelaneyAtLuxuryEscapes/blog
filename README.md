@@ -38,10 +38,10 @@ yarn start
 ```
 
 ## Testing
-### Unit Tests
+### Unit Testing
 _`Vitest` is configured._
-#### Creating Tests
-Given the to-be-tested function resides in a file named `foo.ts`, create a new test file at the same relative directory namely `foo.test.ts`, and start defining test suites/cases using [Vitest API](https://vitest.dev/api/).
+#### Writing Unit Tests
+Given the to-be-tested function resides in a file named `foo.ts`, create a new test file at the same relative directory namely `foo.test.ts`, and start defining test suites/cases using the [Vitest API](https://vitest.dev/api/).
 
 `src/foo.ts` 👇
 ```ts
@@ -59,7 +59,7 @@ test('when foo is called', () => {
 })
 ```
 
-#### Running Tests
+#### Running Unit Tests
 ```bash
 # run all tests, once
 yarn test:unit
@@ -75,10 +75,10 @@ yarn test:unit:gui
 ```
 > Alternatively, [Vitest VSCode extension](https://marketplace.visualstudio.com/items?itemName=ZixuanChen.vitest-explorer) can be used as a convinient way to run tests inside the code editor. (included in workspace recommendations)
 
-### E2E Tests
+### End-to-End Testing
 _`Cypress` is configured._
 
-#### Creating Tests
+#### Writing E2E Tests
 Given the to-be-tested scenario is making sure the word "Foo" is visible when the route "/foo" is visited, create a new test file at `cypress/e2e/` directory namely `viewFoo.cy.ts`, and start defining test suites/cases using the [Cypress API](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test).
 
 `cypress/e2e/viewFoo.cy.ts` 👇
@@ -93,7 +93,7 @@ describe('when the foo route is visited', () => {
 
 ```
 
-#### Running Tests
+#### Running E2E Tests
 > **First, make sure the Node.JS server is running.**
 ```bash
 # run all tests, once
