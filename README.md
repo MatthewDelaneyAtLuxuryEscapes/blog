@@ -71,7 +71,7 @@ yarn test:unit foo
 yarn test:unit:watch
 
 # watch tests run in Vitest GUI
-yarn test:unit:visualise
+yarn test:unit:gui
 ```
 > Alternatively, [Vitest VSCode extension](https://marketplace.visualstudio.com/items?itemName=ZixuanChen.vitest-explorer) can be used as a convinient way to run tests inside the code editor. (included in workspace recommendations)
 
@@ -103,7 +103,7 @@ yarn test:e2e
 yarn test:e2e --spec "cypress/e2e/viewFoo.cy.ts"
 
 # watch tests run in Cypress GUI
-yarn test:e2e:visualise
+yarn test:e2e:gui
 ```
 
 

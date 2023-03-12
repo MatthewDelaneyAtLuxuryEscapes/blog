@@ -13,9 +13,9 @@
     "lint:yml": "eslint --ext .yml ./",
     "test:unit": "vitest --run",
     "test:unit:watch": "vitest",
-    "test:unit:visualise": "vitest --ui",
+    "test:unit:gui": "vitest --ui",
     "test:e2e": "cypress run --e2e",
-    "test:e2e:visualise": "cypress open --e2e",
+    "test:e2e:gui": "cypress open --e2e",
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
