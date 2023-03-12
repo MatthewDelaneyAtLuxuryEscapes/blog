@@ -7,7 +7,7 @@
 > _Find versions in `package.json`_
 #### Suggested Tools
 - `VSCode` as code editor _(extensions and settings recommendations included)_
-- `volta.sh` as JS tool manager _(alternative for `nvm`)_
+- [`volta.sh`](https://volta.sh) as JS tool manager _(alternative for `nvm`)_
 
 ### Dependencies
 ```bash
