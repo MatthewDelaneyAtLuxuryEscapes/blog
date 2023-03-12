@@ -6,6 +6,7 @@
   "rules": {
     "prettier/prettier": "warn",
     "no-console": "error",
+    "no-debugger": "error",
     "no-restricted-imports": ["error", {
       "paths": [
         {"name": "@mui/system", "message": "Use @mui/material instead."},
