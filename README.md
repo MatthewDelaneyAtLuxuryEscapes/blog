@@ -79,7 +79,7 @@ yarn test:e2e:init
 #### Writing E2E Tests
 Given the to-be-tested scenario is making sure the word "Foo" is visible when the route "/foo" is visited, create a new test file at `cypress/e2e/` directory namely `viewFoo.cy.ts`, and start defining test suites/cases using the [Cypress API](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test).
 
-`cypress/e2e/viewFoo.cy.ts` 👇
+`tests/cypress/e2e/viewFoo.cy.ts` 👇
 
 ```ts
 describe('when the foo route is visited', () => {
@@ -98,7 +98,7 @@ describe('when the foo route is visited', () => {
 yarn test:e2e
 
 # run a particual test, viewFoo.cy.ts
-yarn test:e2e --spec "cypress/e2e/viewFoo.cy.ts"
+yarn test:e2e --spec "test/cypress/e2e/viewFoo.cy.ts"
 
 # watch tests run in Cypress GUI
 yarn test:e2e:gui
