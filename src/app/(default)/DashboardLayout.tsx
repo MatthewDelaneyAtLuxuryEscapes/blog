@@ -1,42 +1,16 @@
 'use client'
-import { Box, Drawer, Paper, useMediaQuery, useTheme } from '@mui/material'
-import React, { PropsWithChildren, useEffect, useMemo } from 'react'
+import { Box, Drawer, Paper, Stack } from '@mui/material'
+import React, { PropsWithChildren, useEffect } from 'react'
 import debounce from 'lodash.debounce'
 import useToggleState from '~/hooks/useToggleState'
 import DashboardNavDrawerContent from './DashboardNavDrawerContent'
 import DashboardNavHeader from './DashboardNavHeader'
-import usePrevious from '~/hooks/usePrevious'
 
 export const DASHBOARD_NAV_DRAWER_WIDTH = 256
 
 export default function DashboardLayout(props: PropsWithChildren) {
-  const theme = useTheme()
-  const isSmAndUp = useMediaQuery(theme.breakpoints.up('sm'), { noSsr: true })
-  const wasSmAndUp = usePrevious(isSmAndUp)
-
   const { children } = props
-  const {
-    isToggled: isDrawerOpen,
-    toggleOn: openDrawer,
-    toggleOff: closeDrawer,
-    toggle: toggleDrawer,
-  } = useToggleState()
-
-  const mainContentTransition = useMemo(
-    () =>
-      theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-    [theme.transitions],
-  )
-
-  useEffect(() => {
-    if (!wasSmAndUp && isSmAndUp) {
-      openDrawer()
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isSmAndUp, wasSmAndUp])
+  const { isToggled: isDrawerOpen, toggleOff: closeDrawer, toggle: toggleDrawer } = useToggleState()
 
   useEffect(() => {
     const handleResize = debounce(() => {
@@ -56,12 +30,11 @@ export default function DashboardLayout(props: PropsWithChildren) {
     <Paper
       square
       elevation={0}
-      sx={{ display: 'flex', flexDirection: 'column', minHeight: '100%' }}
+      sx={{ display: 'flex', flexDirection: 'column', minHeight: '100%', maxWidth: '100%' }}
     >
-      <Box display="flex">
+      <Stack direction="row">
         <Drawer
-          open={isDrawerOpen}
-          variant="persistent"
+          variant="permanent"
           sx={{
             display: { xs: 'none', md: 'block' },
             width: DASHBOARD_NAV_DRAWER_WIDTH,
@@ -88,19 +61,11 @@ export default function DashboardLayout(props: PropsWithChildren) {
           <DashboardNavDrawerContent />
         </Drawer>
 
-        <Box
-          flexGrow="1"
-          sx={{
-            ml: {
-              md: !isDrawerOpen ? `-${DASHBOARD_NAV_DRAWER_WIDTH}px` : undefined,
-            },
-            transition: mainContentTransition,
-          }}
-        >
-          <DashboardNavHeader isDrawerOpen={isDrawerOpen} onToggleDrawer={toggleDrawer} />
+        <Box flexBasis="100%" maxWidth="100%" flexGrow="1">
+          <DashboardNavHeader onToggleDrawer={toggleDrawer} />
           {children}
         </Box>
-      </Box>
+      </Stack>
     </Paper>
   )
 }
