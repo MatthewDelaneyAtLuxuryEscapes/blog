@@ -7,7 +7,7 @@ interface Props {
   onToggleDrawer: () => void
 }
 
-export default function DashboardNavHeader(props: Props) {
+export default function DefaultNavHeader(props: Props) {
   const { onToggleDrawer } = props
 
   return (

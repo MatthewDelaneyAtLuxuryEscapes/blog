@@ -1,9 +1,9 @@
 'use client'
 import React, { PropsWithChildren } from 'react'
-import DashboardLayout from './DashboardLayout'
+import DefaultLayout from './DefaultLayout'
 
-export default function DashboardRootLayout(props: PropsWithChildren) {
+export default function DefaultRootLayout(props: PropsWithChildren) {
   const { children } = props
 
-  return <DashboardLayout>{children}</DashboardLayout>
+  return <DefaultLayout>{children}</DefaultLayout>
 }

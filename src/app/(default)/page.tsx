@@ -8,7 +8,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import SellOutlinedIcon from '@mui/icons-material/SellOutlined'
 import PageMainContainer from '~/components/PageMainContainer'
 
-export default function DashboardHomePage() {
+export default function DashboardPage() {
   return (
     <PageMainContainer>
       <Grid container spacing={4} alignItems="stretch" alignContent="stretch">

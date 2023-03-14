@@ -3,12 +3,12 @@ import { Box, Drawer, Paper, Stack } from '@mui/material'
 import { usePathname } from 'next/navigation'
 import React, { PropsWithChildren, useEffect } from 'react'
 import useToggleState from '~/hooks/useToggleState'
-import DashboardNavDrawerContent from './DashboardNavDrawerContent'
-import DashboardNavHeader from './DashboardNavHeader'
+import DefaultNavDrawerContent from './DefaultNavDrawerContent'
+import DefaultNavHeader from './DefaultNavHeader'
 
-export const DASHBOARD_NAV_DRAWER_WIDTH = 256
+export const DEFAULT_NAV_DRAWER_WIDTH = 256
 
-export default function DashboardLayout(props: PropsWithChildren) {
+export default function DefaultLayout(props: PropsWithChildren) {
   const { children } = props
   const { isToggled: isDrawerOpen, toggleOff: closeDrawer, toggle: toggleDrawer } = useToggleState()
   const pathname = usePathname()
@@ -29,32 +29,32 @@ export default function DashboardLayout(props: PropsWithChildren) {
           variant="permanent"
           sx={{
             display: { xs: 'none', md: 'block' },
-            width: DASHBOARD_NAV_DRAWER_WIDTH,
+            width: DEFAULT_NAV_DRAWER_WIDTH,
             flexShrink: 0,
             '& .MuiDrawer-paper': {
-              width: DASHBOARD_NAV_DRAWER_WIDTH,
+              width: DEFAULT_NAV_DRAWER_WIDTH,
             },
           }}
         >
-          <DashboardNavDrawerContent />
+          <DefaultNavDrawerContent />
         </Drawer>
         <Drawer
           open={isDrawerOpen}
           variant="temporary"
           sx={{
             display: { xs: 'block', md: 'none' },
-            width: DASHBOARD_NAV_DRAWER_WIDTH,
+            width: DEFAULT_NAV_DRAWER_WIDTH,
             '& .MuiDrawer-paper': {
-              width: DASHBOARD_NAV_DRAWER_WIDTH,
+              width: DEFAULT_NAV_DRAWER_WIDTH,
             },
           }}
           onClose={closeDrawer}
         >
-          <DashboardNavDrawerContent />
+          <DefaultNavDrawerContent />
         </Drawer>
 
         <Box flexBasis="100%" maxWidth="100%" flexGrow="1">
-          <DashboardNavHeader onToggleDrawer={toggleDrawer} />
+          <DefaultNavHeader onToggleDrawer={toggleDrawer} />
           {children}
         </Box>
       </Stack>

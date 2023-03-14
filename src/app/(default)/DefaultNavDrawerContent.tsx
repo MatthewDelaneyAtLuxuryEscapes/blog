@@ -43,7 +43,7 @@ const POLICY_NAV_ITEMS: NavItem[] = [
   { href: '/policies/transfers', label: 'Transfers Policy', Icon: AirplaneTicketOutlinedIcon },
 ]
 
-export default function DashboardNavDrawerContent() {
+export default function DefaultNavDrawerContent() {
   const theme = useTheme()
   const pathname = usePathname()
 

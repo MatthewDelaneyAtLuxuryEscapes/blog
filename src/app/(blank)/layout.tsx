@@ -2,7 +2,7 @@
 import { Paper } from '@mui/material'
 import React, { PropsWithChildren } from 'react'
 
-export default function AuthRootLayout(props: PropsWithChildren) {
+export default function BlankRootLayout(props: PropsWithChildren) {
   const { children } = props
 
   return (
