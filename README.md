@@ -45,9 +45,9 @@ export default function foo() { return 'foo' }
 import { expect, it, test } from 'vitest'
 import foo from './foo'
 
-test('when foo is called', () => {
+describe('when foo is called', () => {
   it('should output "foo"', () => {
-    expect(foo()).toEqual('foo')
+    expect(foo()).toBe('foo')
   })
 })
 ```
