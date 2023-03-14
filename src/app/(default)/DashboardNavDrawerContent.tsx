@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import {
   alpha,
   Button,
@@ -10,6 +10,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  ListSubheader,
   Stack,
   Toolbar,
   useTheme,
@@ -17,12 +18,33 @@ import {
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
 import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined'
 import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined'
-import NoteAltOutlinedIcon from '@mui/icons-material/NoteAltOutlined'
+import BedOutlinedIcon from '@mui/icons-material/BedOutlined'
+import FlightOutlinedIcon from '@mui/icons-material/FlightOutlined'
+import AirplaneTicketOutlinedIcon from '@mui/icons-material/AirplaneTicketOutlined'
 import BusinessTravellerLogo from '~/components/BusinessTravellerLogo'
 import Link from 'next/link'
 
+interface NavItem {
+  href: string
+  label: string
+  Icon: FunctionComponent
+}
+
+const MAIN_NAV_ITEMS: NavItem[] = [
+  { href: '/', label: 'Dashboard', Icon: DashboardOutlinedIcon },
+  { href: '/reporting', label: 'Reporting', Icon: AutoGraphOutlinedIcon },
+  { href: '/people', label: 'People', Icon: SupervisorAccountOutlinedIcon },
+]
+
+const POLICY_NAV_ITEMS: NavItem[] = [
+  { href: '/policies/hotels', label: 'Hotels Policy', Icon: BedOutlinedIcon },
+  { href: '/policies/flights', label: 'Flights Policy', Icon: FlightOutlinedIcon },
+  { href: '/policies/transfers', label: 'Transfers Policy', Icon: AirplaneTicketOutlinedIcon },
+]
+
 export default function DashboardNavDrawerContent() {
   const theme = useTheme()
+  // const pathname = usePathname()
 
   return (
     <>
@@ -38,30 +60,23 @@ export default function DashboardNavDrawerContent() {
           </Card>
 
           <List>
-            <ListItemButton component={Link} href="/">
-              <ListItemIcon>
-                <DashboardOutlinedIcon />
-              </ListItemIcon>
-              <ListItemText>Dashboard</ListItemText>
-            </ListItemButton>
-            <ListItemButton component={Link} href="/reporting">
-              <ListItemIcon>
-                <AutoGraphOutlinedIcon />
-              </ListItemIcon>
-              <ListItemText>Reporting</ListItemText>
-            </ListItemButton>
-            <ListItemButton component={Link} href="/people">
-              <ListItemIcon>
-                <SupervisorAccountOutlinedIcon />
-              </ListItemIcon>
-              <ListItemText>People</ListItemText>
-            </ListItemButton>
-            <ListItemButton component={Link} href="/policies">
-              <ListItemIcon>
-                <NoteAltOutlinedIcon />
-              </ListItemIcon>
-              <ListItemText>Policy</ListItemText>
-            </ListItemButton>
+            {MAIN_NAV_ITEMS.map((nav) => (
+              <ListItemButton key={nav.href} component={Link} href={nav.href}>
+                <ListItemIcon>
+                  <nav.Icon />
+                </ListItemIcon>
+                <ListItemText>{nav.label}</ListItemText>
+              </ListItemButton>
+            ))}
+            <ListSubheader disableSticky>Policies</ListSubheader>
+            {POLICY_NAV_ITEMS.map((nav) => (
+              <ListItemButton key={nav.href} component={Link} href={nav.href}>
+                <ListItemIcon>
+                  <nav.Icon />
+                </ListItemIcon>
+                <ListItemText>{nav.label}</ListItemText>
+              </ListItemButton>
+            ))}
           </List>
         </Stack>
 
