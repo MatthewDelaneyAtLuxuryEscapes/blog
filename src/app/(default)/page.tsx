@@ -1,25 +1,16 @@
 'use client'
 import React from 'react'
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Container,
-  Grid,
-  IconButton,
-  Stack,
-  Typography,
-} from '@mui/material'
+import { Box, Button, Card, CardContent, Grid, IconButton, Stack, Typography } from '@mui/material'
 import MoreVertIcon from '@mui/icons-material/MoreVert'
 import BusinessOutlinedIcon from '@mui/icons-material/BusinessOutlined'
 import BusinessCenterOutlinedIcon from '@mui/icons-material/BusinessCenterOutlined'
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown'
 import SellOutlinedIcon from '@mui/icons-material/SellOutlined'
+import PageMainContainer from '~/components/PageMainContainer'
 
 export default function DashboardHomePage() {
   return (
-    <Container component="main" maxWidth="xl" sx={{ py: 3 }}>
+    <PageMainContainer>
       <Grid container spacing={4} alignItems="stretch" alignContent="stretch">
         <Grid item xs={12}>
           <Card sx={{ backgroundColor: 'primary.main', color: 'primary.contrastText' }}>
@@ -136,6 +127,6 @@ export default function DashboardHomePage() {
           </Stack>
         </Grid>
       </Grid>
-    </Container>
+    </PageMainContainer>
   )
 }

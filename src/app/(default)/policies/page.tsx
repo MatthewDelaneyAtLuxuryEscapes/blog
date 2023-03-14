@@ -1,11 +1,12 @@
 'use client'
-import { Container, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import React from 'react'
+import PageMainContainer from '~/components/PageMainContainer'
 
 export default function PoliciesPage() {
   return (
-    <Container component="main" maxWidth="xl" sx={{ py: 3 }}>
+    <PageMainContainer>
       <Typography variant="h1">Policies</Typography>
-    </Container>
+    </PageMainContainer>
   )
 }

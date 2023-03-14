@@ -1,5 +1,5 @@
 'use client'
-import { Button, Chip, Container, Skeleton, Stack, Typography } from '@mui/material'
+import { Button, Chip, Skeleton, Stack, Typography } from '@mui/material'
 import { DataGrid, GridColDef } from '@mui/x-data-grid'
 import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined'
 import React from 'react'
@@ -7,6 +7,7 @@ import { useEmployeesQuery } from '~/requests/employees'
 import useToggleState from '~/hooks/useToggleState'
 import EmployeeInvitationDialog from './EmployeeInvitationDialog'
 import pluralise from '~/utilities/pluralise'
+import PageMainContainer from '~/components/PageMainContainer'
 
 const COLUMNS: GridColDef<App.Employee>[] = [
   {
@@ -60,7 +61,7 @@ export default function PeoplePage() {
   } = useToggleState()
 
   return (
-    <Container component="main" maxWidth="xl" sx={{ py: 3 }}>
+    <PageMainContainer>
       <Stack direction="column" gap={3}>
         <Stack direction="row" justifyContent="space-between" alignItems="start" gap={3}>
           <Stack direction="column" gap={1}>
@@ -86,6 +87,6 @@ export default function PeoplePage() {
       </Stack>
 
       <EmployeeInvitationDialog isOpen={isInviteDialogOpen} onClose={closeInviteDialog} />
-    </Container>
+    </PageMainContainer>
   )
 }
