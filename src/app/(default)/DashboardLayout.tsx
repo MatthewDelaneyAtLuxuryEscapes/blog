@@ -1,7 +1,6 @@
 'use client'
 import { Box, Drawer, Paper, Stack } from '@mui/material'
-import React, { PropsWithChildren, useEffect } from 'react'
-import debounce from 'lodash.debounce'
+import React, { PropsWithChildren } from 'react'
 import useToggleState from '~/hooks/useToggleState'
 import DashboardNavDrawerContent from './DashboardNavDrawerContent'
 import DashboardNavHeader from './DashboardNavHeader'
@@ -11,20 +10,6 @@ export const DASHBOARD_NAV_DRAWER_WIDTH = 256
 export default function DashboardLayout(props: PropsWithChildren) {
   const { children } = props
   const { isToggled: isDrawerOpen, toggleOff: closeDrawer, toggle: toggleDrawer } = useToggleState()
-
-  useEffect(() => {
-    const handleResize = debounce(() => {
-      document.documentElement.style.setProperty('--vh', `calc(${window.innerHeight}px * 0.01)`)
-    }, 100)
-
-    handleResize()
-
-    window.addEventListener('resize', handleResize)
-
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
 
   return (
     <Paper

@@ -1,5 +1,5 @@
 html, body {
-  min-height: var(--vh, 100vh);
+  min-height: calc(var(--1vh, 1vh) * 100);
   min-height: -webkit-fill-available;
   height: 100%;
 }
