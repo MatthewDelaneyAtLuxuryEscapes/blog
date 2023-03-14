@@ -24,7 +24,7 @@ export async function reqGET<R = unknown>(url: string | URL): Promise<R> {
   return handleResponse(response)
 }
 
-export async function reqPOST<R = unknown, B = any>(url: string | URL, payload: B): Promise<R> {
+export async function reqPOST<R = unknown, B = unknown>(url: string | URL, payload: B): Promise<R> {
   const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) })
 
   return handleResponse(response)

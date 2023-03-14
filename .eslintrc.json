@@ -2,7 +2,7 @@
   "root": true,
   "ignorePatterns": ["yarn.lock", "*.md"],
   "parser": "@typescript-eslint/parser",
-  "extends": ["next/core-web-vitals", "plugin:react/recommended"],
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "plugin:react/recommended"],
   "plugins": ["@typescript-eslint", "prettier", "react", "unused-imports", "json", "yaml"],
   "rules": {
     "prettier/prettier": "warn",
