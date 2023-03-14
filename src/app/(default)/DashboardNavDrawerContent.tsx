@@ -23,6 +23,7 @@ import FlightOutlinedIcon from '@mui/icons-material/FlightOutlined'
 import AirplaneTicketOutlinedIcon from '@mui/icons-material/AirplaneTicketOutlined'
 import BusinessTravellerLogo from '~/components/BusinessTravellerLogo'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface NavItem {
   href: string
@@ -44,7 +45,7 @@ const POLICY_NAV_ITEMS: NavItem[] = [
 
 export default function DashboardNavDrawerContent() {
   const theme = useTheme()
-  // const pathname = usePathname()
+  const pathname = usePathname()
 
   return (
     <>
@@ -61,7 +62,13 @@ export default function DashboardNavDrawerContent() {
 
           <List>
             {MAIN_NAV_ITEMS.map((nav) => (
-              <ListItemButton key={nav.href} component={Link} href={nav.href}>
+              <ListItemButton
+                key={nav.href}
+                component={Link}
+                href={nav.href}
+                selected={pathname === nav.href}
+                sx={{ borderRadius: 0.5 }}
+              >
                 <ListItemIcon>
                   <nav.Icon />
                 </ListItemIcon>
@@ -70,7 +77,13 @@ export default function DashboardNavDrawerContent() {
             ))}
             <ListSubheader disableSticky>Policies</ListSubheader>
             {POLICY_NAV_ITEMS.map((nav) => (
-              <ListItemButton key={nav.href} component={Link} href={nav.href}>
+              <ListItemButton
+                key={nav.href}
+                component={Link}
+                href={nav.href}
+                selected={pathname === nav.href}
+                sx={{ borderRadius: 0.5 }}
+              >
                 <ListItemIcon>
                   <nav.Icon />
                 </ListItemIcon>
