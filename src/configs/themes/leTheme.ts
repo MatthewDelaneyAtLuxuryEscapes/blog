@@ -63,6 +63,15 @@ const leTheme: Theme = createTheme({
         },
       },
     },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          '&:last-child': {
+            paddingBottom: '16px',
+          },
+        },
+      },
+    },
     MuiDialogActions: {
       styleOverrides: {
         root: {
