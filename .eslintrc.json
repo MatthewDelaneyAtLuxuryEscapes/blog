@@ -1,6 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": ["yarn.lock", "*.md"],
+  "ignorePatterns": ["yarn.lock", "*.md", "*.css"],
   "parser": "@typescript-eslint/parser",
   "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "plugin:react/recommended"],
   "plugins": ["@typescript-eslint", "prettier", "react", "unused-imports", "json", "yaml"],
