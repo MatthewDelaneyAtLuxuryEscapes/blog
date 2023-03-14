@@ -1,6 +1,7 @@
 'use client'
 import { Box, Drawer, Paper, Stack } from '@mui/material'
-import React, { PropsWithChildren } from 'react'
+import { usePathname } from 'next/navigation'
+import React, { PropsWithChildren, useEffect } from 'react'
 import useToggleState from '~/hooks/useToggleState'
 import DashboardNavDrawerContent from './DashboardNavDrawerContent'
 import DashboardNavHeader from './DashboardNavHeader'
@@ -10,6 +11,12 @@ export const DASHBOARD_NAV_DRAWER_WIDTH = 256
 export default function DashboardLayout(props: PropsWithChildren) {
   const { children } = props
   const { isToggled: isDrawerOpen, toggleOff: closeDrawer, toggle: toggleDrawer } = useToggleState()
+  const pathname = usePathname()
+
+  useEffect(() => {
+    closeDrawer()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname])
 
   return (
     <Paper
