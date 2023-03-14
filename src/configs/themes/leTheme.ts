@@ -63,6 +63,22 @@ const leTheme: Theme = createTheme({
         },
       },
     },
+    MuiDialogActions: {
+      styleOverrides: {
+        root: {
+          padding: '8px 24px 24px',
+        },
+      },
+    },
+    MuiDialogContent: {
+      styleOverrides: {
+        root: {
+          '.MuiDialogTitle-root + &': {
+            paddingTop: '8px',
+          },
+        },
+      },
+    },
     MuiDrawer: {
       styleOverrides: {
         paper: {
