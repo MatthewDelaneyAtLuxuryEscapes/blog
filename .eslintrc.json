@@ -29,6 +29,9 @@
       "unnamedComponents": "arrow-function"
     }],
     "react/hook-use-state": ["warn", {"allowDestructuredState": false}],
+    "react/jsx-key": ["error", 
+      {"checkFragmentShorthand": true, "checkKeyMustBeforeSpread": true, "warnOnDuplicates": true}
+    ],
     "react/jsx-pascal-case": ["error", {
       "allowAllCaps": false, "allowLeadingUnderscore": false, "allowNamespace": false
     }],
