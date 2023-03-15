@@ -8,16 +8,16 @@ interface TogglableState {
 }
 
 export default function useToggleState(initialState = false): TogglableState {
-  const [isToggled, toggleBoolean] = useState<boolean>(initialState)
+  const [isToggled, setIsToggled] = useState<boolean>(initialState)
 
   const toggleOn = useCallback(() => {
-    toggleBoolean(true)
+    setIsToggled(true)
   }, [])
   const toggleOff = useCallback(() => {
-    toggleBoolean(false)
+    setIsToggled(false)
   }, [])
   const toggle = useCallback(() => {
-    toggleBoolean((curr) => !curr)
+    setIsToggled((curr) => !curr)
   }, [])
 
   return { isToggled, toggleOn, toggleOff, toggle }
