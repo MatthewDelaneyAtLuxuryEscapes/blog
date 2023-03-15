@@ -24,6 +24,10 @@
     "@next/next/no-html-link-for-pages": "off",
     "react/default-props-match-prop-types": ["error", {"allowRequiredDefaults": false}],
     "react/destructuring-assignment": ["warn", "always", {"destructureInSignature": "ignore"}],
+    "react/function-component-definition": ["warn", {
+      "namedComponents": "function-declaration",
+      "unnamedComponents": "arrow-function"
+    }],
     "react/hook-use-state": ["warn", {"allowDestructuredState": false}],
     "react/no-multi-comp": ["error"],
     "unused-imports/no-unused-imports": "error",
