@@ -1,6 +1,7 @@
 'use client'
 import debounce from 'lodash.debounce'
 import React, { PropsWithChildren, useEffect } from 'react'
+import LocalisationProvider from '~/contexts/LocalisationProvider'
 import MUIProvider from '~/contexts/MUIProvider'
 import QueryProvider from '~/contexts/QueryProvider'
 import SnackbarProvider from '~/contexts/SnackbarProvider'
@@ -30,9 +31,11 @@ export default function RootLayout(props: PropsWithChildren) {
       </head>
       <body>
         <QueryProvider>
-          <MUIProvider>
-            <SnackbarProvider>{children}</SnackbarProvider>
-          </MUIProvider>
+          <LocalisationProvider>
+            <MUIProvider>
+              <SnackbarProvider>{children}</SnackbarProvider>
+            </MUIProvider>
+          </LocalisationProvider>
         </QueryProvider>
       </body>
     </html>
