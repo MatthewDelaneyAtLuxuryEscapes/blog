@@ -15,6 +15,7 @@ const COLUMNS: GridColDef<App.Employee>[] = [
     headerName: 'Name',
     valueGetter: (params) => {
       const { firstName, middleName, lastName } = params.row
+
       return [firstName, middleName, lastName].join(' ')
     },
     minWidth: 150,
