@@ -9,7 +9,10 @@ export default function SnackbsarProvider(props: PropsWithChildren) {
   const isMdAndUp = useMediaQuery(theme.breakpoints.up('md'))
 
   const snackbarAnchorOrigin = useMemo<SnackbarOrigin>(() => {
-    if (isMdAndUp) return { horizontal: 'right', vertical: 'top' }
+    if (isMdAndUp) {
+      return { horizontal: 'right', vertical: 'top' }
+    }
+
     return { horizontal: 'center', vertical: 'bottom' }
   }, [isMdAndUp])
 

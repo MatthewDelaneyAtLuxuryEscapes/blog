@@ -6,8 +6,10 @@
   "plugins": ["@typescript-eslint", "prettier", "react", "unused-imports", "json", "yaml"],
   "rules": {
     "prettier/prettier": "warn",
+    "curly": ["warn", "all"],
     "no-console": "error",
     "no-debugger": "error",
+    "no-lonely-if": "warn",
     "no-restricted-imports": ["error", {
       "paths": [
         {"name": "@mui/system", "message": "Use @mui/material instead."},
