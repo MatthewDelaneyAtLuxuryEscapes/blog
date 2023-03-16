@@ -28,6 +28,21 @@ export default function RootLayout(props: PropsWithChildren) {
     <html lang="en" key="root">
       <head>
         <title>LE for Business</title>
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          media="(prefers-color-scheme: light)"
+          href="/le-dark.svg"
+        />
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          media="(prefers-color-scheme: dark)"
+          href="/le-light.svg"
+        />
+        {process.env.NODE_ENV === 'development' && (
+          <link rel="icon" type="image/svg+xml" href="/le-dev.svg" />
+        )}
       </head>
       <body>
         <QueryProvider>
