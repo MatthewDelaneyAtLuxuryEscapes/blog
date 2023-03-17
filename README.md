@@ -65,6 +65,9 @@ yarn test:unit:watch
 
 # watch tests run in Vitest GUI
 yarn test:unit:gui
+
+# see coverage report
+yarn test:unit:coverage
 ```
 > Alternatively, [Vitest VSCode extension](https://marketplace.visualstudio.com/items?itemName=ZixuanChen.vitest-explorer) can be used as a convinient way to run tests inside the code editor. (included in workspace recommendations)
 

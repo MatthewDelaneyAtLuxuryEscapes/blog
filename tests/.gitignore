@@ -4,3 +4,7 @@ node_modules
 # cypress
 cypress/videos
 cypress/screenshots
+
+# vitest
+unit/coverage
+unit/report
