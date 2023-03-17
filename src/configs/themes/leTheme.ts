@@ -2,6 +2,8 @@
 import { blue, common } from '@mui/material/colors'
 import { createTheme, ThemeOptions } from '@mui/material/styles'
 
+import { INTRINSIC_GREY } from './colours'
+
 declare module '@mui/material/styles' {
   interface Palette {
     neutral: Palette['primary']
@@ -18,19 +20,6 @@ declare module '@mui/material/Button' {
   }
 }
 
-const GREY = {
-  50: '#f7f7ff',
-  100: '#efeff9',
-  200: '#e5e5ef',
-  300: '#d4d3dd',
-  400: '#afafb9',
-  500: '#8f8f98',
-  600: '#676770',
-  700: '#54545c',
-  800: '#36363e',
-  900: '#16161d', // Eigengrau, German for "intrinsic gray"
-}
-
 export const lightTheme: ThemeOptions = createTheme({
   palette: {
     mode: 'light',
@@ -42,7 +31,7 @@ export const lightTheme: ThemeOptions = createTheme({
     neutral: {
       main: common.white,
       light: common.white,
-      dark: GREY[100],
+      dark: INTRINSIC_GREY[100],
       contrastText: common.black,
     },
   },
@@ -121,7 +110,7 @@ export const lightTheme: ThemeOptions = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          backgroundColor: GREY[50],
+          backgroundColor: INTRINSIC_GREY[50],
         },
       },
     },
