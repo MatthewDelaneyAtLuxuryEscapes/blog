@@ -10,8 +10,7 @@ export default function MUIProvider(props: PropsWithChildren) {
 
   return (
     <ThemeProvider theme={leTheme}>
-      <CssBaseline />
-      {children}
+      <CssBaseline>{children}</CssBaseline>
     </ThemeProvider>
   )
 }
