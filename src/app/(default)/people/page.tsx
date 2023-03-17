@@ -1,13 +1,16 @@
 'use client'
+import React from 'react'
+
 import { Button, Chip, Skeleton, Stack, Typography } from '@mui/material'
 import { DataGrid, GridColDef } from '@mui/x-data-grid'
 import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined'
-import React from 'react'
-import { useEmployeesQuery } from '~/requests/employees'
-import useToggleState from '~/hooks/useToggleState'
-import EmployeeInvitationDialog from './EmployeeInvitationDialog'
-import pluralise from '~/utilities/pluralise'
+
 import PageMainContainer from '~/components/PageMainContainer'
+import useToggleState from '~/hooks/useToggleState'
+import { useEmployeesQuery } from '~/requests/employees'
+import pluralise from '~/utilities/pluralise'
+
+import EmployeeInvitationDialog from './EmployeeInvitationDialog'
 
 const COLUMNS: GridColDef<App.Employee>[] = [
   {

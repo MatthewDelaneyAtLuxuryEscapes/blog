@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+
 import pluralise, { getPluralisedWord } from './pluralise'
 
 describe('when the count is zero', () => {

@@ -1,6 +1,7 @@
 'use client'
-import { Paper } from '@mui/material'
 import React, { PropsWithChildren } from 'react'
+
+import { Paper } from '@mui/material'
 
 export default function BlankRootLayout(props: PropsWithChildren) {
   const { children } = props

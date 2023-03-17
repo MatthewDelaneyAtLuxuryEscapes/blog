@@ -1,7 +1,9 @@
 'use client'
+import React from 'react'
+
 import { Button, Grid, Stack, Typography } from '@mui/material'
 import DownloadOutlinedIcon from '@mui/icons-material/DownloadOutlined'
-import React from 'react'
+
 import PageMainContainer from '~/components/PageMainContainer'
 
 export default function ReportingPage() {

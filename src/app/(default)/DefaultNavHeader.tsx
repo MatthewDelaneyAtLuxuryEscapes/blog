@@ -1,7 +1,8 @@
-import { AppBar, Avatar, Badge, IconButton, Stack, Toolbar } from '@mui/material'
 import React from 'react'
-import NotificationsIcon from '@mui/icons-material/Notifications'
+
+import { AppBar, Avatar, Badge, IconButton, Stack, Toolbar } from '@mui/material'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
+import NotificationsIcon from '@mui/icons-material/Notifications'
 
 interface Props {
   onToggleDrawer: () => void

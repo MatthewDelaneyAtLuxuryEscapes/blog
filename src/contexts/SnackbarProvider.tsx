@@ -1,7 +1,8 @@
-import { useMediaQuery, useTheme } from '@mui/material'
+import React, { PropsWithChildren, useMemo } from 'react'
 // eslint-disable-next-line no-restricted-imports
 import { SnackbarOrigin, SnackbarProvider as NotistackProvider } from 'notistack'
-import React, { PropsWithChildren, useMemo } from 'react'
+
+import { useMediaQuery, useTheme } from '@mui/material'
 
 export default function SnackbsarProvider(props: PropsWithChildren) {
   const { children } = props

@@ -1,6 +1,7 @@
 'use client'
-import { CircularProgress, Container } from '@mui/material'
 import React from 'react'
+
+import { CircularProgress, Container } from '@mui/material'
 
 export default function AppLoading() {
   return (

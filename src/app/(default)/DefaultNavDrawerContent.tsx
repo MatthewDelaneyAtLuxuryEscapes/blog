@@ -1,4 +1,7 @@
 import React, { FunctionComponent } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+
 import {
   alpha,
   Button,
@@ -15,15 +18,14 @@ import {
   Toolbar,
   useTheme,
 } from '@mui/material'
-import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
-import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined'
-import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined'
-import BedOutlinedIcon from '@mui/icons-material/BedOutlined'
-import FlightOutlinedIcon from '@mui/icons-material/FlightOutlined'
 import AirplaneTicketOutlinedIcon from '@mui/icons-material/AirplaneTicketOutlined'
+import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined'
+import BedOutlinedIcon from '@mui/icons-material/BedOutlined'
+import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
+import FlightOutlinedIcon from '@mui/icons-material/FlightOutlined'
+import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined'
+
 import BusinessTravellerLogo from '~/components/BusinessTravellerLogo'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 interface NavItem {
   href: string

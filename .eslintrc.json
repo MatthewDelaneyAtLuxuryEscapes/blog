@@ -3,7 +3,7 @@
   "ignorePatterns": ["yarn.lock", "*.md", "*.css", "public"],
   "parser": "@typescript-eslint/parser",
   "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "plugin:react/recommended"],
-  "plugins": ["@typescript-eslint", "prettier", "react", "unused-imports", "json", "yaml"],
+  "plugins": ["@typescript-eslint", "prettier", "react", "unused-imports", "simple-import-sort", "json", "yaml"],
   "rules": {
     "prettier/prettier": "warn",
     "curly": ["warn", "all"],
@@ -37,6 +37,16 @@
     }],
     "react/jsx-props-no-spreading": ["error", {"html": "ignore"}],
     "react/no-multi-comp": ["error"],
+    "simple-import-sort/imports": ["warn", {
+      "groups": [
+        ["^\\u0000"], // side-effects
+        ["^react", "^next", "^@", "^"], // react, next, and others 3rd parties
+        ["^@mui", "^@mui/icons-material"], // MUI
+        ["^~"], // internals
+        ["^\\."] // relative
+      ]
+    }],
+    "sort-imports": "off",
     "unused-imports/no-unused-imports": "error",
     "unused-imports/no-unused-vars": ["error", { "vars": "all", "args": "after-used", "argsIgnorePattern": "^_" }]
   }

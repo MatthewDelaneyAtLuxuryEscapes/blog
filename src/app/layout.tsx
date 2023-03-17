@@ -1,11 +1,13 @@
 'use client'
-import debounce from 'lodash.debounce'
+import './base.css'
+
 import React, { PropsWithChildren, useEffect } from 'react'
+import debounce from 'lodash.debounce'
+
 import LocalisationProvider from '~/contexts/LocalisationProvider'
 import MUIProvider from '~/contexts/MUIProvider'
 import QueryProvider from '~/contexts/QueryProvider'
 import SnackbarProvider from '~/contexts/SnackbarProvider'
-import './base.css'
 
 export default function RootLayout(props: PropsWithChildren) {
   const { children } = props

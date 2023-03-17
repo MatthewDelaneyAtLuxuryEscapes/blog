@@ -1,8 +1,11 @@
 'use client'
-import { Box, Drawer, Paper, Stack } from '@mui/material'
-import { usePathname } from 'next/navigation'
 import React, { PropsWithChildren, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
+
+import { Box, Drawer, Paper, Stack } from '@mui/material'
+
 import useToggleState from '~/hooks/useToggleState'
+
 import DefaultNavDrawerContent from './DefaultNavDrawerContent'
 import DefaultNavHeader from './DefaultNavHeader'
 
