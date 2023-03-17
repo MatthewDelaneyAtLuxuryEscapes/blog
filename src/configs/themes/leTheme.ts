@@ -1,6 +1,6 @@
 'use client'
-import { blue, common, grey } from '@mui/material/colors'
-import { createTheme, Theme } from '@mui/material/styles'
+import { blue, common } from '@mui/material/colors'
+import { createTheme, ThemeOptions } from '@mui/material/styles'
 
 declare module '@mui/material/styles' {
   interface Palette {
@@ -18,8 +18,22 @@ declare module '@mui/material/Button' {
   }
 }
 
-const leTheme: Theme = createTheme({
+const GREY = {
+  50: '#f7f7ff',
+  100: '#efeff9',
+  200: '#e5e5ef',
+  300: '#d4d3dd',
+  400: '#afafb9',
+  500: '#8f8f98',
+  600: '#676770',
+  700: '#54545c',
+  800: '#36363e',
+  900: '#16161d', // Eigengrau, German for "intrinsic gray"
+}
+
+export const lightTheme: ThemeOptions = createTheme({
   palette: {
+    mode: 'light',
     primary: {
       main: blue[500],
       light: blue[400],
@@ -28,7 +42,7 @@ const leTheme: Theme = createTheme({
     neutral: {
       main: common.white,
       light: common.white,
-      dark: grey[100],
+      dark: GREY[100],
       contrastText: common.black,
     },
   },
@@ -107,13 +121,9 @@ const leTheme: Theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          backgroundColor: grey[50],
+          backgroundColor: GREY[50],
         },
       },
     },
   },
 })
-
-export type LETheme = typeof leTheme
-
-export default leTheme

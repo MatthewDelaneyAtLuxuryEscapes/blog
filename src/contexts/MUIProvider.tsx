@@ -3,13 +3,13 @@ import React, { PropsWithChildren } from 'react'
 
 import { CssBaseline, ThemeProvider } from '@mui/material'
 
-import leTheme from '~/configs/themes/leTheme'
+import { lightTheme } from '~/configs/themes/leTheme'
 
 export default function MUIProvider(props: PropsWithChildren) {
   const { children } = props
 
   return (
-    <ThemeProvider theme={leTheme}>
+    <ThemeProvider theme={lightTheme}>
       <CssBaseline>{children}</CssBaseline>
     </ThemeProvider>
   )
