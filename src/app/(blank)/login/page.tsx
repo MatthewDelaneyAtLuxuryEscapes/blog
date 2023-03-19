@@ -15,7 +15,7 @@ export default function AuthLoginPage() {
             <div>
               <Typography variant="h6">Effortless business travel</Typography>
               <Typography variant="body2">
-                Making it easier to manage your business trips.
+                Making it easier to manage your business trips. ss
               </Typography>
             </div>
 
