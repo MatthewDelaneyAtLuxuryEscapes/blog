@@ -29,12 +29,13 @@ export default function RootLayout(props: PropsWithChildren) {
   return (
     <html lang="en" key="root">
       <head>
-        <title>LE for Business</title>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <title>Matthew Delaney blog</title>
         <link
           rel="icon"
           type="image/svg+xml"
           media="(prefers-color-scheme: light)"
-          href="/le-dark.svg"
+          href="/fork.svg"
         />
         <link
           rel="icon"
@@ -42,9 +43,6 @@ export default function RootLayout(props: PropsWithChildren) {
           media="(prefers-color-scheme: dark)"
           href="/le-light.svg"
         />
-        {process.env.NODE_ENV === 'development' && (
-          <link rel="icon" type="image/svg+xml" href="/le-dev.svg" />
-        )}
       </head>
       <body>
         <QueryProvider>

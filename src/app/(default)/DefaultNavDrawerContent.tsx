@@ -15,7 +15,6 @@ import {
   ListItemText,
   ListSubheader,
   Stack,
-  Toolbar,
   useTheme,
 } from '@mui/material'
 import AirplaneTicketOutlinedIcon from '@mui/icons-material/AirplaneTicketOutlined'
@@ -24,8 +23,6 @@ import BedOutlinedIcon from '@mui/icons-material/BedOutlined'
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined'
 import FlightOutlinedIcon from '@mui/icons-material/FlightOutlined'
 import SupervisorAccountOutlinedIcon from '@mui/icons-material/SupervisorAccountOutlined'
-
-import BusinessTravellerLogo from '~/components/BusinessTravellerLogo'
 
 interface NavItem {
   href: string
@@ -51,9 +48,6 @@ export default function DefaultNavDrawerContent() {
 
   return (
     <>
-      <Toolbar>
-        <BusinessTravellerLogo />
-      </Toolbar>
       <Stack direction="column" gap={2} px={2} pb={4} justifyContent="space-between" height="100%">
         <Stack direction="column" gap={4}>
           <Card elevation={0}>

@@ -3,14 +3,11 @@ import React from 'react'
 
 import { Button, Card, Container, Divider, Stack, TextField, Typography } from '@mui/material'
 
-import BusinessTravellerLogo from '~/components/BusinessTravellerLogo'
-
 export default function AuthLoginPage() {
   return (
     <Container maxWidth="xs">
       <Card elevation={0}>
         <Stack direction="column" alignItems="start" gap={3} p={5}>
-          <BusinessTravellerLogo />
           <Stack direction="column" gap={3}>
             <div>
               <Typography variant="h6">Effortless business travel</Typography>
